@@ -1,5 +1,5 @@
 context:
-  version: "7.12.3"
+  version: "7.12.4"
 
 package:
   name: aws-vault
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/ByteNess/aws-vault/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 4ac9d32ff5b68e7ef13b008d8789c31f4b3e80c5a736d03c5739880c859d804f
+    sha256: f1c5ae09608bfb16b1724089e0bcebe4bc56fc93037dc80245759d7ac88144c2
     target_directory: src
   - if: win
     then:
