@@ -3,6 +3,30 @@ About aws-vault-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aws-vault-feedstock/blob/main/LICENSE.txt)
 
+
+About aws-vault
+---------------
+
+Home: https://github.com/ByteNess/aws-vault
+
+Package license: MIT
+
+Summary: A vault for securely storing and accessing AWS credentials in development environments.
+
+Development: https://github.com/ByteNess/aws-vault
+
+aws-vault is a tool to securely store and access AWS credentials in a
+development environment. It stores IAM credentials in your operating
+system's secure keystore and then generates temporary credentials from
+those to expose to your shell and applications. It's designed to be
+complementary to the AWS CLI tools, and is aware of your profiles and
+configuration in ~/.aws/config.
+
+This is the ByteNess fork of the original 99designs/aws-vault project.
+
+About aws-vault
+---------------
+
 Home: https://github.com/ByteNess/aws-vault
 
 Package license: MIT
@@ -58,13 +82,6 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aws-vault-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
                 </a>
               </td>
-            </tr><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=28075&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/aws-vault-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
-                </a>
-              </td>
             </tr>
           </tbody>
         </table>
@@ -90,31 +107,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `aws-vault` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install aws-vault
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install aws-vault
 ```
 
-It is possible to list all of the versions of `aws-vault` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add aws-vault
+# for installing globally
+pixi global install aws-vault
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `aws-vault` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search aws-vault --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search aws-vault --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search aws-vault --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -126,6 +185,8 @@ mamba repoquery whoneeds aws-vault --channel conda-forge
 # List dependencies of `aws-vault`:
 mamba repoquery depends aws-vault --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
