@@ -1,2 +1,5 @@
 c_stdlib_version:  # [osx]
   - "14.0"         # [osx]
+# go's cgo compiler package currently constrains clang 21 on osx
+c_compiler_version:  # [osx]
+  - "21"             # [osx]
